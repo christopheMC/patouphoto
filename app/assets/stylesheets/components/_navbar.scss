@@ -1,6 +1,11 @@
-.navbar-lewagon {
-  justify-content: space-between;
+.navbar-patou {
   background: white;
+  height: 60px;
+  font-size: 24px;
+  ul {
+    text-decoration: none;
+    list-style-type: none;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
