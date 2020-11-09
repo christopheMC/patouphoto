@@ -1,11 +1,16 @@
 <div class="container">
   <div class="row">
-    <ul>
-      <%= @animals.each do |animal| %>
-        <%= link_to animal_path(animal) do %>
-          <li><%= animal.name %></li>
-        <% end %>
-      <% end %>
-    </ul>
+    <div class="col-12">
+      <div class="border-bottom">
+        <ul class="list-inline">
+          <% @animals.each do |animal| %>
+            <%= link_to animal_path(animal) do %>
+              <li class="list-inline-item"><%= animal.name %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </div>
