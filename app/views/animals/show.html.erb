@@ -1,0 +1,4 @@
+<%= link_to "Effacer #{@animal.name}",
+            animal_path(@animal),
+            method: :delete,
+            data: {confirm: "Êtes-vous sûr(e)?" } %>

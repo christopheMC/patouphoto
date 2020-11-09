@@ -2,9 +2,13 @@
   background: white;
   height: 60px;
   font-size: 24px;
+  z-index: 100;
   ul {
-    text-decoration: none;
     list-style-type: none;
+  }
+  li {
+    text-decoration: none;
+    color: black;
   }
 }
 

@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+#home {
+  background-image: asset-url('macareux_look2.jpg');
+  background-size: cover;
+  height: 92.3vh;
+  position: relative;
+}
+
+.titre {
+  position: absolute;
+  top: 275px;
+  left: 25px;
+  align-items: center;
+  p {
+    font-size: 65px;
+    padding-top: 35px;
+    padding-left: 20px;
+  }
+}
