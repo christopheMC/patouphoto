@@ -1,16 +1,22 @@
 <div class="container">
   <div class="row">
-    <div class="col-12">
-      <div class="border-bottom">
+    <div class="col-sm-12">
+      <div class="liste border-bottom">
         <ul class="list-inline">
           <% @animals.each do |animal| %>
             <%= link_to animal_path(animal) do %>
-              <li class="list-inline-item"><%= animal.name %></li>
+              <li class="list-inline-item mt-2 mr-3"><%= animal.name %></li>
             <% end %>
           <% end %>
         </ul>
       </div>
-
+      <div class="cards mt-3">
+        <% @animals.each do |animal| %>
+          <% animal.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, width: 360, crop: :fill %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
