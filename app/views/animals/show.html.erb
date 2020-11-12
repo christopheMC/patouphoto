@@ -1,11 +1,36 @@
-<%= link_to "Effacer #{@animal.name}",
-            animal_path(@animal),
-            method: :delete,
-            data: {confirm: "Êtes-vous sûr(e)?" } %>
-
-<div>
-  <h3><%= @animal.name %></h3>
-  <% @animal.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<div class="trash">
+  <% if user_signed_in? %>
+    <div class="showme">
+      <%= link_to "Effacer #{@animal.name}",
+                  animal_path(@animal),
+                  method: :delete,
+                  data: {confirm: "Êtes-vous sûr(e)?" } %>
+    </div>
   <% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <% if user_signed_in? %>
+          <div class="d-flex justify-content-center border-bottom dropdown">
+            <h3 class="mt-2 mb-3 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= @animal.name %></h3>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <%= link_to "AJOUTER PHOTO(S)", new_animal_image_path(@animal), class: "dropdown-item" %>
+            </div>
+          </div>
+        <% else %>
+          <div class="border-bottom dropdown d-flex justify-content-center">
+            <h3 class="mt-2 mb-3"><%= @animal.name %></h3>
+          </div>
+        <% end %>
+        <div class="cards mt-3">
+          <% @animal.images.each do |image| %>
+            <div class="d-flex flex-column">
+              <%= cl_image_tag image.photo.key, width: 360, crop: :fill %>
+              <p><%= image.description %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
