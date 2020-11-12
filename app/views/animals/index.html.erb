@@ -12,8 +12,8 @@
       </div>
       <div class="cards mt-3">
         <% @animals.each do |animal| %>
-          <% animal.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, width: 360, crop: :fill %>
+          <% animal.images.each do |image| %>
+            <%= cl_image_tag image.photo.key, width: 360, crop: :fill %>
           <% end %>
         <% end %>
       </div>
