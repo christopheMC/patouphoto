@@ -37,9 +37,11 @@
     <div class="row">
       <div class="col-sm-12 d-flex justify-content-center">
         <div class="autoplay">
-          <div><%= image_tag "chevre.jpg", alt: "chevre", width: 600 %></div>
-          <div><%= image_tag "cochon.jpg", alt: "cochon", width: 600 %></div>
-          <div><%= image_tag "mouton.jpg", alt: "mouton", width: 600 %></div>
+          <% @animal.images.each do |image| %>
+            <div class="d-flex justify-content-center">
+              <%= cl_image_tag image.photo.key, width: 1000 %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

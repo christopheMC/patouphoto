@@ -17,6 +17,11 @@
   }
 }
 
-// .title {
-//   text-align: center;
-// }
+.autoplay {
+  width: 1000px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
