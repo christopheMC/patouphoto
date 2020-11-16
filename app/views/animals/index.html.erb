@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 mb-3">
       <div class="liste border-bottom">
         <ul class="list-inline">
           <% @animals.each do |animal| %>
@@ -13,7 +13,7 @@
       <div class="cards mt-3">
         <% @animals.each do |animal| %>
           <% animal.images.each do |image| %>
-            <%= cl_image_tag image.photo.key, width: 360, crop: :fill %>
+            <%= cl_image_tag image.photo.key, width: 360, height: 240, crop: :fill %>
           <% end %>
         <% end %>
       </div>

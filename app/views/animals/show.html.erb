@@ -25,10 +25,21 @@
         <div class="cards mt-3">
           <% @animal.images.each do |image| %>
             <div class="d-flex flex-column">
-              <%= cl_image_tag image.photo.key, width: 360, crop: :fill %>
+              <%= cl_image_tag image.photo.key, width: 360, height: 240, crop: :fill %>
               <p><%= image.description %></p>
             </div>
           <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 d-flex justify-content-center">
+        <div class="autoplay">
+          <div><%= image_tag "chevre.jpg", alt: "chevre", width: 600 %></div>
+          <div><%= image_tag "cochon.jpg", alt: "cochon", width: 600 %></div>
+          <div><%= image_tag "mouton.jpg", alt: "mouton", width: 600 %></div>
         </div>
       </div>
     </div>
