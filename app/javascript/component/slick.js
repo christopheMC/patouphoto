@@ -4,7 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 const slick = () => {
-  $('.single-item').slick();
+  $(document).on('click', () => {
+    $('.single-item').slick();
+  });
 }
 
 export { slick }
