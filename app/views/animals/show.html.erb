@@ -24,7 +24,7 @@
         <% end %>
         <div class="cards mt-3">
           <% @animal.images.each do |image| %>
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column" data-toggle="modal" data-target="#showModal">
               <%= cl_image_tag image.photo.key, width: 360, height: 240, crop: :fill %>
               <p><%= image.description %></p>
             </div>
@@ -33,13 +33,20 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 d-flex justify-content-center">
-        <div class="autoplay">
+</div>
+<div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="showModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="d-flex justify-content-end">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <div class="single-item">
           <% @animal.images.each do |image| %>
             <div class="d-flex justify-content-center">
-              <%= cl_image_tag image.photo.key, width: 1000 %>
+              <%= cl_image_tag image.photo.key, width: 1000, height: 650, crop: :fill %>
             </div>
           <% end %>
         </div>

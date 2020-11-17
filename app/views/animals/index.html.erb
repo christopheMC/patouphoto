@@ -13,9 +13,33 @@
       <div class="cards mt-3">
         <% @animals.each do |animal| %>
           <% animal.images.each do |image| %>
-            <%= cl_image_tag image.photo.key, width: 360, height: 240, crop: :fill %>
+            <div data-toggle="modal" data-target="#indexModal">
+              <%= cl_image_tag image.photo.key, width: 360, height: 240, crop: :fill %>
+            </div>
           <% end %>
         <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="indexModal" tabindex="-1" aria-labelledby="indexModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="d-flex justify-content-end">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <div class="single-item">
+          <% @animals.each do |animal| %>
+            <% animal.images.each do |image| %>
+              <div data-toggle="modal" data-target="#indexModal">
+                <%= cl_image_tag image.photo.key, width: 1000, height: 650, crop: :fill %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
