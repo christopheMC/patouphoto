@@ -1,0 +1,29 @@
+.contact {
+  display: flex;
+  justify-content: space-around
+}
+
+.formulaire {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 625px;
+  width: 500px;
+  padding: 20px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 625px;
+  width: 500px;
+  padding: 20px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
