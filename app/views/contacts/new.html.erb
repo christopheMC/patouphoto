@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="contact">
+        <div class="question">
+          <p>Une photo vous plait?</p>
+          <p>Vous souhaitez avoir des renseignements?</p>
+          <p>Contactez-moi</p>
+        </div>
+        <div class="formulaire">
+          <%= simple_form_for(@contact) do |f| %>
+            <%= f.input :email %>
+            <%= f.input :content %>
+            <%= f.button :submit, "ENVOYER", class: "btn btn-success" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
