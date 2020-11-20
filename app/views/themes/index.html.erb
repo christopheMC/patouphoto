@@ -3,16 +3,16 @@
     <div class="col-sm-12 mb-3">
       <div class="liste border-bottom">
         <ul class="list-inline">
-          <% @animals.each do |animal| %>
-            <%= link_to animal_path(animal) do %>
-              <li class="list-inline-item mt-2 mr-3"><%= animal.name %></li>
+          <% @themes.each do |theme| %>
+            <%= link_to theme_path(theme) do %>
+              <li class="list-inline-item mt-2 mr-3"><%= theme.name %></li>
             <% end %>
           <% end %>
         </ul>
       </div>
       <div class="cards mt-3">
-        <% @animals.each do |animal| %>
-          <% animal.images.each do |image| %>
+        <% @themes.each do |theme| %>
+          <% theme.images.each do |image| %>
             <div data-toggle="modal" data-target="#indexModal">
               <%= cl_image_tag image.photo.key, width: 360, height: 240, crop: :fill %>
             </div>
@@ -32,8 +32,8 @@
       </div>
       <div class="modal-body d-flex justify-content-center">
         <div class="single-item">
-          <% @animals.each do |animal| %>
-            <% animal.images.each do |image| %>
+          <% @themes.each do |theme| %>
+            <% theme.images.each do |image| %>
               <div data-toggle="modal" data-target="#indexModal">
                 <%= cl_image_tag image.photo.key, width: 1000, height: 650, crop: :fill %>
               </div>

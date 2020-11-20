@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="livre d-flex justify-content-center align-items-center">
+        <%= simple_form_for(@livredor) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :content %>
+          <%= f.button :submit, "POSTER VOTRE COMMENTAIRE", class: "btn btn-success" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

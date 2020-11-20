@@ -1,8 +1,8 @@
 <div class="trash">
   <% if user_signed_in? %>
     <div class="showme">
-      <%= link_to "Effacer #{@animal.name}",
-                  animal_path(@animal),
+      <%= link_to "Effacer #{@theme.name}",
+                  theme_path(@theme),
                   method: :delete,
                   data: {confirm: "Êtes-vous sûr(e)?" } %>
     </div>
@@ -12,18 +12,18 @@
       <div class="col-sm-12">
         <% if user_signed_in? %>
           <div class="d-flex justify-content-center border-bottom dropdown">
-            <h3 class="mt-2 mb-3 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= @animal.name %></h3>
+            <h3 class="mt-2 mb-3 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= @theme.name %></h3>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-              <%= link_to "AJOUTER PHOTO(S)", new_animal_image_path(@animal), class: "dropdown-item" %>
+              <%= link_to "AJOUTER PHOTO(S)", new_theme_image_path(@theme), class: "dropdown-item" %>
             </div>
           </div>
         <% else %>
           <div class="border-bottom dropdown d-flex justify-content-center">
-            <h3 class="mt-2 mb-3"><%= @animal.name %></h3>
+            <h3 class="mt-2 mb-3"><%= @theme.name %></h3>
           </div>
         <% end %>
         <div class="cards mt-3">
-          <% @animal.images.each do |image| %>
+          <% @theme.images.each do |image| %>
             <div class="d-flex flex-column" data-toggle="modal" data-target="#showModal">
               <%= cl_image_tag image.photo.key, width: 360, height: 240, crop: :fill %>
               <p><%= image.description %></p>
@@ -44,7 +44,7 @@
       </div>
       <div class="modal-body d-flex justify-content-center">
         <div class="single-item">
-          <% @animal.images.each do |image| %>
+          <% @theme.images.each do |image| %>
             <div class="d-flex justify-content-center">
               <%= cl_image_tag image.photo.key, width: 1000, height: 650, crop: :fill %>
             </div>
