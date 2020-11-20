@@ -1,6 +1,9 @@
 .contact {
   height: 100vh;
+  position: relative;
+  padding-top: 80px;
 }
+
 .formulaire {
   border: 2px solid black;
   border-radius: 5px;
@@ -22,4 +25,26 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+.butto {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.affiche {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 110px;
+  p {
+    padding: 10px 10px 0px 10px;
+    margin: 0;
+  }
+  p:nth-child(2) {
+    font-size: 12px;
+  }
 }
