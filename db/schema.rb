@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_20_081845) do
+ActiveRecord::Schema.define(version: 2020_11_20_115535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,10 +45,10 @@ ActiveRecord::Schema.define(version: 2020_11_20_081845) do
 
   create_table "images", force: :cascade do |t|
     t.string "description"
-    t.bigint "animal_id", null: false
+    t.bigint "theme_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["animal_id"], name: "index_images_on_animal_id"
+    t.index ["theme_id"], name: "index_images_on_theme_id"
   end
 
   create_table "livredors", force: :cascade do |t|
@@ -77,5 +77,5 @@ ActiveRecord::Schema.define(version: 2020_11_20_081845) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "images", "themes", column: "animal_id"
+  add_foreign_key "images", "themes"
 end
