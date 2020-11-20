@@ -11,14 +11,14 @@
     <div class="row">
       <div class="col-sm-12">
         <% if user_signed_in? %>
-          <div class="d-flex justify-content-center border-bottom dropdown">
-            <h3 class="mt-2 mb-3 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= @theme.name %></h3>
+          <div class="sho d-flex justify-content-center border-bottom dropdown">
+            <h3 class="mt-2 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= @theme.name %></h3>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
               <%= link_to "AJOUTER PHOTO(S)", new_theme_image_path(@theme), class: "dropdown-item" %>
             </div>
           </div>
         <% else %>
-          <div class="border-bottom dropdown d-flex justify-content-center">
+          <div class="sho border-bottom d-flex justify-content-center">
             <h3 class="mt-2 mb-3"><%= @theme.name %></h3>
           </div>
         <% end %>
