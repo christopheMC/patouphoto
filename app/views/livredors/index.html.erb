@@ -5,7 +5,10 @@
         <% @livredors.each do |livredor| %>
           <div class="affichage">
             <p class="flex-grow-1"><%= livredor.content %></p>
-            <p><%= livredor.name %></p>
+            <div>
+              <p><%= livredor.name %></p>
+              <P><%= livredor.created_at %></P>
+            </div>
           </div>
         <% end %>
         <div class="lien">
