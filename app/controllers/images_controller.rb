@@ -1,15 +1,15 @@
 class ImagesController < ApplicationController
   def new
-    @animal  = Animal.find(params[:animal_id])
+    @theme  = Theme.find(params[:theme_id])
     @image = Image.new
   end
 
   def create
     @image = Image.new(image_params)
-    @animal = Animal.find(params[:animal_id])
-    @image.animal = @animal
+    @theme = Theme.find(params[:theme_id])
+    @image.theme = @theme
     if @image.save
-      redirect_to animal_path(@animal)
+      redirect_to theme_path(@theme)
     else
       render :new
     end
@@ -18,7 +18,7 @@ class ImagesController < ApplicationController
   def destroy
     @image = Image.find(params[:id])
     @image.destroy
-    redirect_to animal_path(@image.animal)
+    redirect_to theme_path(@image.theme)
   end
 
   private
