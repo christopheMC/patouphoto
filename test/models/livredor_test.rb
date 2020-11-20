@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class     AnimalsControllerTest < ActionDispatch::IntegrationTest
+class LivredorTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

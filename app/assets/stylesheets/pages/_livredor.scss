@@ -1,0 +1,27 @@
+.livredor {
+  position: relative;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+.lien {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.affichage {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  width: 80%;
+  margin-bottom: 10px;
+  height: 60px;
+  p {
+    padding: 10px;
+  }
+}
+
+.livre {
+  height: 100vh;
+}

@@ -5,10 +5,13 @@
         <%= link_to "ACCUEIL", root_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "PORTFOLIO", animals_path, class: "nav-link" %>
+        <%= link_to "PORTFOLIO", themes_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "CONTACT", contact_path , class: "nav-link" %>
+        <%= link_to "CONTACT", new_contact_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "LIVRE D'OR", livredors_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to "A PROPOS", about_path, class: "nav-link" %>
@@ -16,22 +19,25 @@
       <li class="nav-item dropdown">
         <%= image_tag "appareil_photo.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "AJOUTER THEME", new_animal_path, class: "dropdown-item" %>
+          <%= link_to "AJOUTER THEME", new_theme_path, class: "dropdown-item" %>
           <%= link_to "DECONNEXION", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       </li>
     <% else %>
       <li>
-        <%= link_to "ACCUEIL", root_path %>
+        <%= link_to "ACCUEIL", root_path, class: "nav-link" %>
       </li>
       <li>
-        <%= link_to "PORTFOLIO", animals_path %>
+        <%= link_to "PORTFOLIO", themes_path, class: "nav-link" %>
       </li>
       <li>
-        <%= link_to "CONTACT", new_contact_path %>
+        <%= link_to "CONTACT", new_contact_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "LIVRE D'OR", livredors_path, class: "nav-link" %>
       </li>
       <li>
-        <%= link_to "A PROPOS", about_path %>
+        <%= link_to "A PROPOS", about_path, class: "nav-link" %>
       </li>
     <% end %>
   </ul>

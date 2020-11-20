@@ -2,13 +2,13 @@
 #home {
   background-image: asset-url('macareux_look2.jpg');
   background-size: cover;
-  height: 92.3vh;
+  height: 100vh;
   position: relative;
 }
 
 .titre {
   position: absolute;
-  top: 275px;
+  top: 50%;
   left: 25px;
   align-items: center;
   p {
@@ -37,3 +37,9 @@
   bottom: 20px;
   right: 20px;
 }
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
