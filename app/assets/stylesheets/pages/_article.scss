@@ -1,4 +1,23 @@
 .article {
   height: 100vh;
   padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.article-info {
+  width: 602px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.article-title {
+  display: flex;
+  align-items: center;
+}
+
+.article-photo {
+  height: 240px;
+  display: flex;
+  align-items: flex-end;
 }

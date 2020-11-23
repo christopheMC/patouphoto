@@ -2,7 +2,22 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="article">
-
+        <div>
+          <% @articles.each do |article| %>
+            <% article.photos.each do |photo| %>
+              <div class="article-info mb-3">
+                <div>
+                  <%= cl_image_tag photo.key, width: 600, height: 240, crop: :fill %>
+                </div>
+                <div class="article-title border-bottom">
+                  <p class="flex-grow-1 pl-2"><%= article.title %></p>
+                  <p class="pr-2">Publié le <%= article.created_at %></p>
+                </div>
+                <p class="pl-2"><%= article.body %> </p>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
