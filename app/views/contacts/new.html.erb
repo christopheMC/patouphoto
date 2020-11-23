@@ -15,6 +15,11 @@
           <% end %>
         </div>
       </div>
+      <div class="butto">
+        <% if user_signed_in? %>
+          <%= link_to "LISTE DES CONTACTS", contacts_path, class: "btn btn-success" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

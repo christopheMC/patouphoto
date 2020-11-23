@@ -1,6 +1,9 @@
 class ContactsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :new, :create ]
 
+  def index
+    @contacts = Contact.all
+  end
 
   def new
     @contact = Contact.new
@@ -10,7 +13,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.save
 
-    redirect_to animals_path
+    redirect_to root_path
   end
 
   private

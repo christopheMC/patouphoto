@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="contact d-flex flex-column align-items-center">
+        <% @contacts.each do |contact| %>
+          <div class="affiche">
+            <p class="flex-grow-1"><%= contact.content %></p>
+            <div class=" d-flex flex-column justify-content-center">
+              <p><%= contact.email %></p>
+              <P><%= contact.created_at %></p>
+            </div>
+            <div class="form-check d-flex align-items-center ml-2 mr-2">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Contacté(e)
+              </label>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
