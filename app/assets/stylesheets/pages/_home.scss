@@ -1,9 +1,11 @@
 // Specific CSS for your home-page
 #home {
-  background-image: asset-url('macareux_look2.jpg');
+  background-image: asset-url('1.jpg');
   background-size: cover;
+  width: 100%;
   height: 100vh;
-  position: relative;
+  position: absolute;
+  top: 0px;
 }
 
 .titre {
@@ -22,12 +24,12 @@
 }
 
 .liste {
+  margin-top: 55px;
   a {
     text-decoration: none;
     color: black;
     font-size: 24px;
   }
-  padding-top: 60px;
   ul {
     margin-bottom: 10px;
   }
@@ -45,5 +47,5 @@
 }
 
 .formul-new-theme {
-  height: 100vh;
+  height: 94vh;
 }
