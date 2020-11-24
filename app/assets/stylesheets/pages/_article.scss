@@ -3,6 +3,10 @@
   padding-top: 80px;
   display: flex;
   justify-content: center;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .article-info {
@@ -20,4 +24,10 @@
   height: 240px;
   display: flex;
   align-items: flex-end;
+}
+
+.white {
+  background-color: grey;
+  width: 600px;
+  height: 400px;
 }
