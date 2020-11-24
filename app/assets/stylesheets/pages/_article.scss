@@ -1,7 +1,7 @@
 .article {
   height: 100vh;
-  padding-top: 80px;
   display: flex;
+  padding-top: 75px;
   justify-content: center;
   a {
     text-decoration: none;
@@ -9,9 +9,16 @@
   }
 }
 
+.article-bis {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .article-info {
-  width: 602px;
-  height: 400px;
+  width: 900px;
+  height: 500px;
   border: 1px solid black;
 }
 
@@ -23,11 +30,9 @@
 .article-photo {
   height: 240px;
   display: flex;
-  align-items: flex-end;
+  justify-content: space-around;
 }
 
 .white {
-  background-color: grey;
-  width: 600px;
-  height: 400px;
+  width: 900px;
 }

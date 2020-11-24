@@ -9,12 +9,10 @@
           </div>
           <p class="pl-2 pt-2"><%= @article.body %> </p>
           <div class="article-photo">
-            <div class="d-flex">
               <% @article.photos.each do |photo| %>
-                <%= cl_image_tag photo.key, width: 300, height: 240, crop: :fill %>
-                <%= cl_image_tag photo.key, width: 300, height: 240, crop: :fill %>
+                <%= cl_image_tag photo.key, width: 425, height: 240, crop: :fill %>
+                <%= cl_image_tag photo.key, width: 425, height: 240, crop: :fill %>
               <% end %>
-            </div>
           </div>
         </div>
       </div>
