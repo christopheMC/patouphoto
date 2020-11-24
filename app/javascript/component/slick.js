@@ -9,4 +9,4 @@ const slick = () => {
   });
 }
 
-export { slick }
+export { slick };

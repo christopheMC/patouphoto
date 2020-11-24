@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 // Internal imports, e.g:
 import { slick } from '../component/slick.js';
+import { updateNavbarOnScroll } from '../component/updateNavbar.js';
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
@@ -35,6 +36,7 @@ document.addEventListener('turbolinks:load', () => {
     $(".alert").alert('close');
   });
   slick();
+  updateNavbarOnScroll();
 });
 
 require("trix")
