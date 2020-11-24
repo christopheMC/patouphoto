@@ -31,6 +31,9 @@ import { slick } from '../component/slick.js';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  $(".alert").delay(2000).slideUp(500, function(){
+    $(".alert").alert('close');
+  });
   slick();
 });
 
