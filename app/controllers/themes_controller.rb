@@ -15,9 +15,12 @@ class ThemesController < ApplicationController
 
   def create
     @theme = Theme.new(theme_params)
-    @theme.save
-
-    redirect_to theme_path(@theme)
+    @theme.user = current_user
+    if @theme.save
+      redirect_to theme_path(@theme)
+    else
+      render :new
+    end
   end
 
   def edit
