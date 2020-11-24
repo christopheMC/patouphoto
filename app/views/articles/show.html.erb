@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="article">
+        <div class="white">
+          <div class="article-title border-bottom">
+            <p class="flex-grow-1 pl-2 pt-2"><%= @article.title %></p>
+            <p class="pr-2 pt-2">Publié le <%= @article.created_at %></p>
+          </div>
+          <p class="pl-2 pt-2"><%= @article.body %> </p>
+          <div class="article-photo">
+            <div class="d-flex">
+              <% @article.photos.each do |photo| %>
+                <%= cl_image_tag photo.key, width: 300, height: 240, crop: :fill %>
+                <%= cl_image_tag photo.key, width: 300, height: 240, crop: :fill %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
