@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :images, only: [ :new, :create ]
   end
   resources :images, only: [ :destroy ]
-  resources :contacts, only: [ :new, :create, :index ]
+  resources :contacts, only: [ :new, :create, :index, :edit, :update ]
   resources :livredors, only: [ :new, :create, :index ]
   resources :articles
 end
