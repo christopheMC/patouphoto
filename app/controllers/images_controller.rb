@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+    before_action :set_image, only: [ :destroy ]
+
   def new
     @theme  = Theme.find(params[:theme_id])
     @image = Image.new
@@ -16,12 +18,15 @@ class ImagesController < ApplicationController
   end
 
   def destroy
-    @image = Image.find(params[:id])
     @image.destroy
     redirect_to theme_path(@image.theme)
   end
 
   private
+
+  def set_image
+    @image = Image.find(params[:id])
+  end
 
   def image_params
     params.require(:image).permit(:description, :photo)

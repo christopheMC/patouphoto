@@ -7,7 +7,7 @@
             <p class="flex-grow-1 pl-2 pt-2"><%= @article.title %></p>
             <p class="pr-2 pt-2">Publié le <%= @article.created_at %></p>
           </div>
-          <p class="pl-2 pt-2"><%= @article.body %> </p>
+          <p class="pl-2 pt-2"><%= @article.rich_body %> </p>
           <div class="article-photo">
               <% @article.photos.each do |photo| %>
                 <%= cl_image_tag photo.key, width: 425, height: 240, crop: :fill %>

@@ -4,7 +4,7 @@
       <div class="article-bis">
         <%= simple_form_for(@article) do |f| %>
           <%= f.input :title %>
-          <%= f.input :body %>
+          <%= f.rich_text_area :rich_body %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.button :submit, "POSTER", class: "btn btn-success" %>
         <% end %>
