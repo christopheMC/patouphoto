@@ -13,16 +13,18 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="article">
-          <div class="white">
+          <div class="whito">
             <div class="article-title border-bottom">
               <p class="flex-grow-1 pl-2 pt-2"><%= @article.title %></p>
               <p class="pr-2 pt-2">Publié le <%= @article.created_at %></p>
             </div>
-            <p class="pl-2 pt-2"><%= @article.rich_body %></p>
+            <div class="pl-2 pt-3 pb-3" style="height: 200px">
+              <%= @article.rich_body %>
+            </div>
             <div class="article-photo">
-                <% @article.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, width: 425, height: 240, crop: :fill %>
-                <% end %>
+              <% @article.photos.each do |photo| %>
+                <%= cl_image_tag photo.key, width: 445, height: 240, crop: :fill %>
+              <% end %>
             </div>
           </div>
         </div>

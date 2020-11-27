@@ -18,21 +18,25 @@
 
 .article-info {
   width: 900px;
-  height: 500px;
+  height: 530px;
   border: 1px solid black;
 }
 
 .article-title {
   display: flex;
   align-items: center;
+  p:first-child {
+    font-size: 32px;
+  }
 }
 
 .article-photo {
   height: 240px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-self: flex-end;
 }
 
-.white {
+.whito {
   width: 900px;
 }
