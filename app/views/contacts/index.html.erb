@@ -4,7 +4,7 @@
       <div class="contact d-flex flex-column align-items-center">
         <% @contacts.each do |contact| %>
           <div class="affiche">
-            <input class="form-checkbox" type="checkbox" value="" id="defaultCheck1">
+            <input class="form-checkbox" type="checkbox" value="" id="defaultCheck" data-contact-id="<%= contact.id %>">
             <p class="flex-grow-1"><%= contact.content %></p>
             <div class="inf d-flex flex-column justify-content-center">
               <p><%= contact.email %></p>

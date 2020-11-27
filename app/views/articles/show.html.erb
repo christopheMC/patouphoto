@@ -1,18 +1,29 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="article">
-        <div class="white">
-          <div class="article-title border-bottom">
-            <p class="flex-grow-1 pl-2 pt-2"><%= @article.title %></p>
-            <p class="pr-2 pt-2">Publié le <%= @article.created_at %></p>
-          </div>
-          <p class="pl-2 pt-2"><%= @article.rich_body %> </p>
-          <div class="article-photo">
-              <% @article.photos.each do |photo| %>
-                <%= cl_image_tag photo.key, width: 425, height: 240, crop: :fill %>
-                <%= cl_image_tag photo.key, width: 425, height: 240, crop: :fill %>
-              <% end %>
+<div class="trash">
+  <% if user_signed_in? %>
+    <div class="showme d-flex flex-column">
+      <%= link_to "Effacer",
+                  article_path(@article),
+                  method: :delete,
+                  data: {confirm: "Êtes-vous sûr(e)?" },
+                  class: "btn btn-danger mt-2" %>
+      <%= link_to "Modifier l'article", edit_article_path(@article), class: "btn btn-success mt-5" %>
+    </div>
+  <% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="article">
+          <div class="white">
+            <div class="article-title border-bottom">
+              <p class="flex-grow-1 pl-2 pt-2"><%= @article.title %></p>
+              <p class="pr-2 pt-2">Publié le <%= @article.created_at %></p>
+            </div>
+            <p class="pl-2 pt-2"><%= @article.rich_body %></p>
+            <div class="article-photo">
+                <% @article.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key, width: 425, height: 240, crop: :fill %>
+                <% end %>
+            </div>
           </div>
         </div>
       </div>

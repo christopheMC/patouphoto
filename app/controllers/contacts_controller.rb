@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :new, :create, :edit, :create ]
+  before_action :set_contact, only: [ :contacted ]
+  skip_before_action :authenticate_user!, only: [ :new, :create ]
 
   def index
     @contacts = Contact.all
@@ -16,18 +17,22 @@ class ContactsController < ApplicationController
     redirect_to root_path
   end
 
-  def edit
-  end
-
-  def update
-    @contact.update(contact_params)
-
-    redirect_to contact_path(@contact)
+  def contacted
+    @contact.contacted = true
+    if @contact.save
+      render json: { success: true }
+    else
+      render json: { success: false }, status: :unprocessable_entity
+    end
   end
 
   private
 
+  def set_contact
+    @contact = Contact.find(params[:id])
+  end
+
   def contact_params
-    params.require(:contact).permit(:email, :content, :contacted)
+    params.require(:contact).permit(:email, :content)
   end
 end

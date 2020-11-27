@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     resources :images, only: [ :new, :create ]
   end
   resources :images, only: [ :destroy ]
-  resources :contacts, only: [ :new, :create, :index, :edit, :update ]
+  resources :contacts, only: [ :new, :create, :index ] do
+    member do
+      post 'contacted'
+    end
+  end
   resources :livredors, only: [ :new, :create, :index ]
   resources :articles
 end
