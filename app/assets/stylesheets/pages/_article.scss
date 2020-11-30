@@ -31,10 +31,15 @@
 }
 
 .article-photo {
-  height: 240px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+}
+
+.article-photos {
+  height: 310px;
   display: flex;
   justify-content: space-between;
-  align-self: flex-end;
 }
 
 .whito {

@@ -51,8 +51,11 @@
     font-size: 12px;
   }
 }
-input:checked + p {
+
+.para {
+  input:checked + p {
   text-decoration: line-through;
+  }
 }
 
 input[type="checkbox"] {
