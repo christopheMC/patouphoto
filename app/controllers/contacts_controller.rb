@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :new, :create ]
 
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all.sort
   end
 
   def new

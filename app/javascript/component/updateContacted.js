@@ -2,12 +2,15 @@ import { fetchWithToken } from "../utils/fetch_with_token";
 
 const updateContacted = () => {
   const checkboxes = document.querySelectorAll('.form-checkbox');
-  const afficheck = document.querySelectorAll('.affiche');
-  checkboxes.forEach(checkbox => checkbox.addEventListener('click', () => {
+  const affichecks = document.querySelectorAll('.affiche');
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', (event) => {
     event.preventDefault();
-    for (let i = 0; i < afficheck.count; i++) {
-      this.classList.add('para');
+    for (let i = 0; i < affichecks.length; i++) {
+      if (checkboxes[i].checked) {
+        affichecks[i].classList.replace('affiche', 'para');
+      }
     }
+
     const contactId = checkbox.dataset.contactId;
 
     fetchWithToken(`/contacts/${contactId}/contacted`, {
