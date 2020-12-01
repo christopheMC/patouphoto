@@ -18,13 +18,18 @@
 
 .article-info {
   width: 900px;
-  height: 530px;
+  border: 1px solid black;
+}
+
+.article-info-bis {
+  width: 900px;
   border: 1px solid black;
 }
 
 .article-title {
   display: flex;
   align-items: center;
+  height: 70px;
   p:first-child {
     font-size: 32px;
   }
