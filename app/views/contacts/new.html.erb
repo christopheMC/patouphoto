@@ -9,8 +9,8 @@
         </div>
         <div class="formulaire">
           <%= simple_form_for(@contact) do |f| %>
-            <%= f.input :email %>
-            <%= f.input :content %>
+            <%= f.input :email, :label => 'Votre email' %>
+            <%= f.input :content, :label => 'Posez votre question' %>
             <%= f.button :submit, "ENVOYER", class: "btn btn-success" %>
           <% end %>
         </div>

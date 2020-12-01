@@ -4,10 +4,14 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :themes do
-    resources :images, only: [ :index, :new, :create ]
+    resources :images, only: [ :new, :create ]
   end
-  resources :images, only: [ :show, :edit, :update, :destroy ]
-  resources :contacts, only: [ :new, :create, :index ]
+  resources :images, only: [ :destroy ]
+  resources :contacts, only: [ :new, :create, :index ] do
+    member do
+      post 'contacted'
+    end
+  end
   resources :livredors, only: [ :new, :create, :index ]
   resources :articles
 end
