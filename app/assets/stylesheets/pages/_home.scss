@@ -59,3 +59,26 @@
 .fa-heart {
   color: #D23333;
 }
+
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .liste {
+    a {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .liste {
+    a {
+      font-size: 10px;
+    }
+  }
+}

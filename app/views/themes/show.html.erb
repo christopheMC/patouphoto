@@ -26,7 +26,7 @@
         <div class="cards mt-3">
           <% @theme.images.each do |image| %>
             <div class="foto d-flex flex-column" data-toggle="modal" data-target="#showModal">
-              <%= cl_image_tag image.photo.key, width: 360, height: 240, crop: :fill %>
+              <%= cl_image_tag image.photo.key, height: 240, crop: :fill %>
               <% if user_signed_in? %>
                 <%= link_to "+", image_path(image), method: :delete, data: { confirm: "Are you sure?" }, class: "remove-link" %>
               <% end %>

@@ -13,10 +13,7 @@
   a {
     text-decoration: none;
     color: black;
-    // font-weight: bolder;
-  }
-  img {
-    margin-top: 5px;
+
   }
 }
 
@@ -37,9 +34,26 @@
   a {
     text-decoration: none;
     color: black;
-    // font-weight: bolder;
   }
-  img {
-    margin-top: 5px;
+}
+
+@media (max-width: 1200px) {
+  .navbar-patou {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 870px) {
+  .navbar-patou {
+    font-size: 15px;
+    ul {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .navbar-patou {
+    font-size: 11px;
   }
 }
