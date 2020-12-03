@@ -13,18 +13,71 @@
   border: 1px solid black;
   border-radius: 5px;
   display: flex;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 10px;
   height: 80px;
   p {
     padding: 10px 10px 0px 10px;
     margin: 0;
+    width: 80%;
   }
   p:nth-child(2) {
     font-size: 12px;
+  }
+  div {
+    width: 200px;
   }
 }
 
 .livre {
   height: 100vh;
+}
+
+@media (max-width: 1199.98px) {
+  .affichage {
+    p {
+      font-size: 14px;
+    }
+    p:nth-child(2) {
+    font-size: 10px;
+    }
+  }
+  .lien {
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .affichage {
+    p {
+      font-size: 12px;
+    }
+    p:nth-child(2) {
+    font-size: 8px;
+    }
+  }
+  .lien {
+    a {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .affichage {
+    p {
+      font-size: 12px;
+    }
+    p:nth-child(2) {
+    font-size: 8px;
+    }
+  }
+  .lien {
+    a {
+      font-size: 12px;
+    }
+  }
 }

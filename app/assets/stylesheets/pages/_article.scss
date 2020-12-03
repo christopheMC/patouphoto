@@ -1,5 +1,4 @@
 .article {
-  height: 100vh;
   display: flex;
   padding-top: 75px;
   justify-content: center;
@@ -17,18 +16,22 @@
 }
 
 .article-info {
-  width: 900px;
+  width: 100%;
   border: 1px solid black;
+  img {
+    width: 100%;
+  }
 }
 
 .article-info-bis {
-  width: 900px;
+  width: 100%;
   border: 1px solid black;
 }
 
 .article-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 70px;
   p:first-child {
     font-size: 32px;
@@ -36,17 +39,48 @@
 }
 
 .article-photo {
-  height: 460px;
   display: flex;
   justify-content: center;
 }
 
 .article-photos {
-  height: 310px;
   display: flex;
   justify-content: space-between;
 }
 
 .whito {
-  width: 900px;
+  width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+  .article-title {
+    p:first-child {
+      font-size: 26px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .article-title {
+    p:first-child {
+      font-size: 22px;
+    }
+    p {
+      font-size: 13px
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .article-title {
+    p:first-child {
+      font-size: 16px;
+    }
+    p {
+      font-size: 11px;
+    }
+  }
 }

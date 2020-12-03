@@ -21,6 +21,9 @@
   p:first-child {
     font-size: 5px;
   }
+  img {
+    width: 90px;
+  }
 }
 
 .liste {
@@ -69,6 +72,22 @@
       font-size: 17px;
     }
   }
+  .titre {
+    p:last-child {
+      font-size: 45px;
+    }
+    img {
+      width: 70px;
+    }
+    p:first-child {
+    font-size: 5px;
+    }
+  }
+  .compteur {
+    p {
+      font-size: 14px;
+    }
+  }
 }
 
 @media (max-width: 540px) {
@@ -77,6 +96,26 @@
     grid-template-columns: 1fr;
   }
   .liste {
+    a {
+      font-size: 10px;
+    }
+  }
+  .titre {
+    p:last-child {
+      font-size: 30px;
+    }
+    img {
+      width: 50px;
+    }
+    p:first-child {
+    font-size: 5px;
+    }
+  }
+  .compteur {
+    p {
+      font-size: 10px;
+      color: black;
+    }
     a {
       font-size: 10px;
     }
