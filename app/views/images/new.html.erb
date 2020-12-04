@@ -1,13 +1,7 @@
-<div class="container">
-  <div class="row mt-5">
-    <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
-      <div class="sho">
-        <%= simple_form_for [@theme, @image] do |f| %>
-          <%= f.input :photo, as: :file %>
-          <%= f.input :description %>
-          <%= f.button :submit, "AJOUTER PHOTO", class: "btn btn-success" %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+<div class="showi">
+  <%= simple_form_for [@theme, @image] do |f| %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :description %>
+    <%= f.button :submit, "AJOUTER PHOTO", class: "btn btn-success" %>
+  <% end %>
 </div>

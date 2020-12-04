@@ -7,16 +7,20 @@
   top: 0px;
   z-index: 100;
   ul {
+    margin: 0;
     list-style-type: none;
     padding-left: 0px;
   }
   a {
     text-decoration: none;
     color: black;
-    // font-weight: bolder;
+    padding: 5px;
+  }
+  p {
+    margin-bottom: 0;
   }
   img {
-    margin-top: 5px;
+    padding: 2px;
   }
 }
 
@@ -31,15 +35,33 @@
   top: 0px;
   z-index: 100;
   ul {
+    margin: 0;
     list-style-type: none;
     padding-left: 0px;
   }
   a {
     text-decoration: none;
     color: black;
-    // font-weight: bolder;
   }
-  img {
-    margin-top: 5px;
+}
+
+@media (max-width: 1200px) {
+  .navbar-patou {
+    font-size: 18px;
+    height: 47px;
+  }
+}
+
+@media (max-width: 870px) {
+  .navbar-patou {
+    font-size: 15px;
+    height: 41px;
+  }
+}
+
+@media (max-width: 540px) {
+  .navbar-patou {
+    font-size: 13px;
+    height: 35px;
   }
 }

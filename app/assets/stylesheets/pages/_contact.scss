@@ -1,30 +1,31 @@
 .contact {
-  height: 92vh;
-  margin-top: 75px;
-  z-index: -10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .formulaire {
   border: 2px solid black;
   border-radius: 5px;
   height: 625px;
-  width: 500px;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 25px 25px 0 25px;
 }
 
 .question {
   border: 2px solid black;
   border-radius: 5px;
   height: 625px;
-  width: 500px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin: 25px 25px 0 25px;
 }
 
 .affiche {
@@ -33,19 +34,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin-bottom: 10px;
   height: 110px;
   p {
-    padding: 10px 10px 0px 10px;
     margin: 0;
     font-size: 24px;
   }
 }
 
 .inf {
+  width: 25%;
   p:first-child {
     font-size: 18px;
+    padding-right: 10px;
   }
   p:nth-child(2) {
     font-size: 12px;
@@ -59,17 +61,127 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin-bottom: 10px;
   height: 110px;
   p {
-    padding: 10px 10px 0px 10px;
     margin: 0;
     font-size: 24px;
     text-decoration: line-through;
   }
 }
 
+.art {
+  display: flex;
+  justify-content: flex-start;
+  width: 75%;
+}
+
 input[type="checkbox"] {
   margin: 20px;
 }
+
+@media (max-width: 1199.98px) {
+  .para {
+    p {
+      font-size: 14px;
+    }
+  }
+  .affiche {
+    p {
+      font-size: 14px;
+    }
+  }
+  .inf {
+    p:first-child {
+      font-size: 18px;
+    }
+    p:nth-child(2) {
+      font-size: 12px;
+    }
+  }
+  .art {
+    width: 60%;
+  }
+  .inf {
+    width: 40%;
+  }
+  .question {
+    height: 505px;
+  }
+  .formulaire {
+    height: 505px;
+  }
+}
+
+@media (max-width: 880px) {
+  .para {
+    p {
+      font-size: 12px;
+    }
+  }
+  .affiche {
+    p {
+      font-size: 12px;
+    }
+  }
+  .inf {
+    p:first-child {
+      font-size: 18px;
+    }
+    p:nth-child(2) {
+      font-size: 12px;
+    }
+  }
+  .art {
+    width: 60%;
+  }
+  .inf {
+    width: 40%;
+  }
+  .question {
+    height: 410px;
+  }
+  .formulaire {
+    height: 410px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .para {
+    p {
+      font-size: 14px;
+    }
+  }
+  .affiche {
+    p {
+      font-size: 14px;
+    }
+  }
+  .inf {
+    p:first-child {
+      font-size: 13px;
+    }
+    p:nth-child(2) {
+      font-size: 11px;
+    }
+  }
+  .art {
+    width: 60%;
+  }
+  .inf {
+    width: 40%;
+  }
+  .question {
+    height: 300px;
+  }
+  .formulaire {
+    height: 300px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

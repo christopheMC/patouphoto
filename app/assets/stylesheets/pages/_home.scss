@@ -21,10 +21,13 @@
   p:first-child {
     font-size: 5px;
   }
+  img {
+    width: 90px;
+  }
 }
 
 .liste {
-  margin-top: 55px;
+  margin: 55px 25px 10px 25px;
   a {
     text-decoration: none;
     color: black;
@@ -58,4 +61,57 @@
 
 .fa-heart {
   color: #D23333;
+}
+
+@media (max-width: 1200px) {
+  .liste {
+    a {
+      font-size: 15px;
+    }
+  }
+  .titre {
+    p:last-child {
+      font-size: 45px;
+    }
+    img {
+      width: 70px;
+    }
+    p:first-child {
+    font-size: 5px;
+    }
+  }
+  .compteur {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .liste {
+    a {
+      font-size: 13px;
+    }
+  }
+  .titre {
+    p:last-child {
+      font-size: 30px;
+    }
+    img {
+      width: 50px;
+    }
+    p:first-child {
+    font-size: 5px;
+    }
+  }
+  .compteur {
+    p {
+      font-size: 10px;
+      color: black;
+    }
+    a {
+      font-size: 10px;
+    }
+  }
 }
