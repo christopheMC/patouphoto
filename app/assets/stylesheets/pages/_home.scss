@@ -27,7 +27,7 @@
 }
 
 .liste {
-  margin-top: 55px;
+  margin: 55px 55px 10px 55px;
   a {
     text-decoration: none;
     color: black;
@@ -64,12 +64,9 @@
 }
 
 @media (max-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
   .liste {
     a {
-      font-size: 17px;
+      font-size: 15px;
     }
   }
   .titre {
@@ -92,12 +89,9 @@
 
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
-  .cards {
-    grid-template-columns: 1fr;
-  }
   .liste {
     a {
-      font-size: 10px;
+      font-size: 13px;
     }
   }
   .titre {

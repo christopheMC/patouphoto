@@ -1,27 +1,22 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 mb-3">
-      <div class="liste border-bottom">
-        <ul class="list-inline">
-          <% @themes.each do |theme| %>
-            <%= link_to theme_path(theme) do %>
-              <li class="list-inline-item mt-2 mr-3"><%= theme.name %></li>
-            <% end %>
-          <% end %>
-        </ul>
-      </div>
-      <div class="cards mt-3">
-        <% @themes.each do |theme| %>
-          <% theme.images.each do |image| %>
-            <div class="card" data-toggle="modal" data-target="#indexModal">
-              <%= cl_image_tag image.photo.key, height: 240, crop: :fill %>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+<div class="liste border-bottom">
+  <ul class="list-inline">
+    <% @themes.each do |theme| %>
+      <%= link_to theme_path(theme) do %>
+        <li class="list-inline-item mt-2 mr-3"><%= theme.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
 </div>
+<div class="cards mt-3">
+  <% @themes.each do |theme| %>
+    <% theme.images.each do |image| %>
+      <div class="card" data-toggle="modal" data-target="#indexModal">
+        <%= cl_image_tag image.photo.key, crop: :fill %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
 <div class="modal fade" id="indexModal" tabindex="-1" aria-labelledby="indexModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
@@ -35,7 +30,7 @@
           <% @themes.each do |theme| %>
             <% theme.images.each do |image| %>
               <div data-toggle="modal" data-target="#indexModal">
-                <%= cl_image_tag image.photo.key, width: 1000, height: 650, crop: :fill %>
+                <%= cl_image_tag image.photo.key, height: 650, crop: :fill %>
               </div>
             <% end %>
           <% end %>

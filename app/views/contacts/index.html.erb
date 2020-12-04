@@ -1,29 +1,25 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="contact d-flex flex-column align-items-center">
-        <% @contacts.each do |contact| %>
-          <% if contact.contacted == true %>
-            <div class="para">
-              <input class="form-checkbox" type="checkbox" value="" id="defaultCheck" data-contact-id="<%= contact.id %>">
-              <p class="flex-grow-1"><%= contact.content %></p>
-              <div class="inf d-flex flex-column justify-content-center">
-                <p><%= contact.email %></p>
-                <p><%= contact.created_at %></p>
-              </div>
-            </div>
-          <% else %>
-            <div class="affiche">
-              <input class="form-checkbox" type="checkbox" value="" id="defaultCheck" data-contact-id="<%= contact.id %>">
-              <p class="flex-grow-1"><%= contact.content %></p>
-              <div class="inf d-flex flex-column justify-content-center">
-                <p><%= contact.email %></p>
-                <p><%= contact.created_at %></p>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
+<div class="contact d-flex flex-column align-items-center">
+  <div style="height: 75px">
   </div>
+  <% @contacts.each do |contact| %>
+    <% if contact.contacted == true %>
+      <div class="para">
+        <input class="form-checkbox" type="checkbox" value="" id="defaultCheck" data-contact-id="<%= contact.id %>">
+        <p class="flex-grow-1"><%= contact.content %></p>
+        <div class="inf d-flex flex-column justify-content-center">
+          <p><%= contact.email %></p>
+          <p><%= contact.created_at %></p>
+        </div>
+      </div>
+    <% else %>
+      <div class="affiche">
+        <input class="form-checkbox" type="checkbox" value="" id="defaultCheck" data-contact-id="<%= contact.id %>">
+        <p class="flex-grow-1"><%= contact.content %></p>
+        <div class="inf d-flex flex-column justify-content-center">
+          <p><%= contact.email %></p>
+          <p><%= contact.created_at %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>

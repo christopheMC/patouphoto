@@ -13,7 +13,13 @@
   a {
     text-decoration: none;
     color: black;
-
+    padding: 5px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  img {
+    padding: 2px;
   }
 }
 
@@ -54,6 +60,6 @@
 
 @media (max-width: 540px) {
   .navbar-patou {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
