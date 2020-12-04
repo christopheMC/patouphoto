@@ -1,20 +1,14 @@
-<div class="container">
-  <div class="row d-flex justify-content-center">
-    <div class="col-sm-12">
-      <div class="livredor d-flex flex-column align-items-center">
-        <% @livredors.each do |livredor| %>
-          <div class="affichage">
-            <p><%= livredor.content %></p>
-            <div>
-              <p><%= livredor.name %></p>
-              <P><%= livredor.created_at %></P>
-            </div>
-          </div>
-        <% end %>
-        <div class="lien">
-          <%= link_to "LAISSER UN COMMENTAIRE", new_livredor_path, class: "btn btn-success" %>
-        </div>
+<div class="livredor d-flex flex-column align-items-center">
+  <% @livredors.each do |livredor| %>
+    <div class="affichage">
+      <p><%= livredor.content %></p>
+      <div>
+        <p><%= livredor.name %></p>
+        <P><%= livredor.created_at %></P>
       </div>
     </div>
-  </div>
+  <% end %>
+</div>
+<div class="lien">
+  <%= link_to "LAISSER UN COMMENTAIRE", new_livredor_path, class: "btn btn-success" %>
 </div>

@@ -1,11 +1,11 @@
-<div class="contact d-flex flex-column align-items-center">
-  <div style="height: 75px">
-  </div>
+<div class="contact">
   <% @contacts.each do |contact| %>
     <% if contact.contacted == true %>
       <div class="para">
         <input class="form-checkbox" type="checkbox" value="" id="defaultCheck" data-contact-id="<%= contact.id %>">
-        <p class="flex-grow-1"><%= contact.content %></p>
+        <div class="art">
+          <p><%= contact.content %></p>
+        </div>
         <div class="inf d-flex flex-column justify-content-center">
           <p><%= contact.email %></p>
           <p><%= contact.created_at %></p>
@@ -14,7 +14,9 @@
     <% else %>
       <div class="affiche">
         <input class="form-checkbox" type="checkbox" value="" id="defaultCheck" data-contact-id="<%= contact.id %>">
-        <p class="flex-grow-1"><%= contact.content %></p>
+        <div class="art">
+          <p><%= contact.content %></p>
+        </div>
         <div class="inf d-flex flex-column justify-content-center">
           <p><%= contact.email %></p>
           <p><%= contact.created_at %></p>

@@ -1,12 +1,14 @@
 .livredor {
-  height: 100vh;
-  padding-top: 75px;
+  margin: 75px 25px 35px 25px;
+  height: 75vh;
+  overflow: auto;
 }
 
 .lien {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
 }
 
 .affichage {
@@ -16,11 +18,10 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 10px;
-  height: 80px;
   p {
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 10px 10px;
     margin: 0;
-    width: 80%;
+    width: 85%;
   }
   p:nth-child(2) {
     font-size: 12px;

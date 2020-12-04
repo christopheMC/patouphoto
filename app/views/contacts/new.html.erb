@@ -1,16 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="question col-sm">
-      <p>Une photo vous plait?</p>
-      <p>Vous souhaitez avoir des renseignements?</p>
-      <p>Contactez-moi</p>
-    </div>
-    <div class="formulaire col-sm">
-      <%= simple_form_for(@contact) do |f| %>
-        <%= f.input :email, :label => 'Votre email' %>
-        <%= f.input :content, :label => 'Posez votre question' %>
-        <%= f.button :submit, "ENVOYER", class: "btn btn-success" %>
-      <% end %>
-    </div>
+<div class="contact">
+  <div class="question">
+    <p>Une photo vous plait?</p>
+    <p>Vous souhaitez avoir des renseignements?</p>
+    <p>Contactez-moi</p>
+  </div>
+  <div class="formulaire">
+    <%= simple_form_for(@contact) do |f| %>
+      <%= f.input :email, :label => 'Votre email' %>
+      <%= f.input :content, :label => 'Posez votre question' %>
+      <%= f.button :submit, "ENVOYER", class: "btn btn-success" %>
+    <% end %>
   </div>
 </div>
