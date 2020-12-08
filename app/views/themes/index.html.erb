@@ -10,7 +10,7 @@
 <div class="cards mt-3">
   <% @themes.each do |theme| %>
     <% theme.images.each do |image| %>
-      <div class="card" data-toggle="modal" data-target="#indexModal">
+      <div class="card d-flex justify-content-center" data-toggle="modal" data-target="#indexModal">
         <%= cl_image_tag image.photo.key, crop: :fill %>
       </div>
     <% end %>
@@ -30,7 +30,7 @@
           <% @themes.each do |theme| %>
             <% theme.images.each do |image| %>
               <div data-toggle="modal" data-target="#indexModal">
-                <%= cl_image_tag image.photo.key, height: 650, crop: :fill %>
+                <%= cl_image_tag image.photo.key, crop: :fill %>
               </div>
             <% end %>
           <% end %>

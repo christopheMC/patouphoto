@@ -18,12 +18,14 @@
 <% end %>
 <div class="cards mt-3">
   <% @theme.images.each do |image| %>
-    <div class="card d-flex flex-column" data-toggle="modal" data-target="#showModal">
-      <%= cl_image_tag image.photo.key, height: 250, crop: :fill %>
+    <div class="card d-flex flex-column justify-content-between" data-toggle="modal" data-target="#showModal">
+      <%= cl_image_tag image.photo.key, crop: :fill %>
       <% if user_signed_in? %>
         <%= link_to "+", image_path(image), method: :delete, data: { confirm: "Are you sure?" }, class: "remove-link" %>
       <% end %>
-      <p><%= image.description %></p>
+      <div>
+        <p class="p-2"><%= image.description %></p>
+      </div>
     </div>
   <% end %>
 </div>
@@ -39,7 +41,7 @@
         <div class="single-item">
           <% @theme.images.each do |image| %>
             <div class="d-flex justify-content-center">
-              <%= cl_image_tag image.photo.key, height: 650, crop: :fill %>
+              <%= cl_image_tag image.photo.key, crop: :fill %>
             </div>
           <% end %>
         </div>

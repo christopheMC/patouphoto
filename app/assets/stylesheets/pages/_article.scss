@@ -79,6 +79,9 @@
 }
 
 @media (max-width: 880px) {
+  .article {
+    margin: 60px 25px 10px 25px;
+  }
   .article-title {
     p:first-child {
       font-size: 22px;
@@ -96,6 +99,9 @@
 }
 
 @media (max-width: 575.98px) {
+  .article {
+    margin: 50px 25px 10px 25px;
+  }
   .article-title {
     p:first-child {
       font-size: 16px;

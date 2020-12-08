@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 #home {
   background-image: asset-url('1.jpg');
+  background-position: center;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -27,7 +28,7 @@
 }
 
 .liste {
-  margin: 55px 25px 10px 25px;
+  margin: 55px 125px 10px 125px;
   a {
     text-decoration: none;
     color: black;
@@ -65,13 +66,39 @@
 
 @media (max-width: 1200px) {
   .liste {
+    margin: 47px 85px 10px 85px;
+    a {
+      font-size: 18px;
+    }
+  }
+  .titre {
+    p:last-child {
+      font-size: 54px;
+    }
+    img {
+      width: 70px;
+    }
+    p:first-child {
+    font-size: 5px;
+    }
+  }
+  .compteur {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .liste {
+    margin: 41px 50px 10px 50px;
     a {
       font-size: 15px;
     }
   }
   .titre {
     p:last-child {
-      font-size: 45px;
+      font-size: 42px;
     }
     img {
       width: 70px;
@@ -90,6 +117,7 @@
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
   .liste {
+    margin: 35px 25px 10px 25px;
     a {
       font-size: 13px;
     }
@@ -112,6 +140,11 @@
     }
     a {
       font-size: 10px;
+    }
+  }
+  .single-item {
+    img {
+      width: 200px;
     }
   }
 }
