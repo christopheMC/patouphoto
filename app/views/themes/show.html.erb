@@ -30,7 +30,7 @@
   <% end %>
 </div>
 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="showModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
+  <div class="modal-dialog modal-dialog-centered modal-sm modal-lg modal-xl">
     <div class="modal-content">
       <div class="d-flex justify-content-end">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -40,7 +40,7 @@
       <div class="modal-body d-flex justify-content-center">
         <div class="single-item">
           <% @theme.images.each do |image| %>
-            <div class="d-flex justify-content-center">
+            <div class="relou d-flex justify-content-center">
               <%= cl_image_tag image.photo.key, crop: :fill %>
             </div>
           <% end %>

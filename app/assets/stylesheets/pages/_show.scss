@@ -1,5 +1,10 @@
 .single-item {
-  width: 80%;
+  width: 95%;
+  height: 75vh;
+}
+
+.relou {
+  height: 73vh;
 }
 
 .slick-prev:before,
@@ -44,13 +49,6 @@
     color: white;
     text-decoration: none;
     opacity: 1;
-  }
-}
-
-.single-item {
-  img {
-    height: 625px;
-    width: 880px;
   }
 }
 
