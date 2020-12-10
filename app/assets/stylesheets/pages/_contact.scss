@@ -84,12 +84,12 @@ input[type="checkbox"] {
 @media (max-width: 1199.98px) {
   .para {
     p {
-      font-size: 14px;
+      font-size: 20px;
     }
   }
   .affiche {
     p {
-      font-size: 14px;
+      font-size: 20px;
     }
   }
   .inf {
@@ -108,21 +108,23 @@ input[type="checkbox"] {
   }
   .question {
     height: 505px;
+    font-size: 15px;
   }
   .formulaire {
     height: 505px;
+    font-size: 15px;
   }
 }
 
 @media (max-width: 880px) {
   .para {
     p {
-      font-size: 12px;
+      font-size: 17px;
     }
   }
   .affiche {
     p {
-      font-size: 12px;
+      font-size: 17px;
     }
   }
   .inf {
@@ -141,9 +143,11 @@ input[type="checkbox"] {
   }
   .question {
     height: 410px;
+    font-size: 13px;
   }
   .formulaire {
     height: 410px;
+    font-size: 13px;
   }
 }
 
@@ -173,10 +177,12 @@ input[type="checkbox"] {
     width: 40%;
   }
   .question {
-    height: 300px;
+    height: 235px;
+    font-size: 13px;
   }
   .formulaire {
-    height: 300px;
+    height: 250px;
+    font-size: 13px;
   }
   .contact {
     display: flex;
