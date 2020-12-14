@@ -8,17 +8,19 @@
   </ul>
 </div>
 <div class="cards mt-3">
+  <% image_count = 0 %>
   <% @themes.each do |theme| %>
     <% theme.images.each do |image| %>
-      <div class="card d-flex justify-content-center" data-toggle="modal" data-target="#indexModal">
+      <div class="card d-flex justify-content-center" data-toggle="modal" data-target="#indexModal" data-image-id="<%= image_count %>" >
+        <% image_count +=1 %>
         <%= cl_image_tag image.photo.key, crop: :fill %>
       </div>
     <% end %>
   <% end %>
 </div>
 
-<div class="modal fade" id="indexModal" tabindex="-1" aria-labelledby="indexModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm modal-lg modal-xl">
+<div class="modal fade" id="indexModal" tabindex="-1" aria-labelledby="indexModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-xl">
     <div class="modal-content">
       <div class="d-flex justify-content-end">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -26,7 +28,7 @@
         </button>
       </div>
       <div class="modal-body d-flex justify-content-center">
-        <div class="single-item">
+        <div class="single-item" style="opacity: 0;" data-image-id="0">
           <% @themes.each do |theme| %>
             <% theme.images.each do |image| %>
               <div class="relou d-flex justify-content-center">

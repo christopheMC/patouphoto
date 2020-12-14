@@ -56,16 +56,37 @@
   .sho {
   margin: 47px 85px 10px 85px;
   }
+  .single-item {
+    width: 95%;
+    height: 66vh;
+  }
+  .relou {
+    height: 55vh;
+  }
 }
 
 @media (max-width: 870px) {
   .sho {
   margin: 41px 50px 10px 50px;
   }
+  .single-item {
+    width: 95%;
+    height: 58vh;
+  }
+  .relou {
+    height: 57vh;
+  }
 }
 
 @media (max-width: 540px) {
   .sho {
   margin: 35px 25px 10px 25px;
+  }
+  .single-item {
+    width: 95%;
+    height: 50vh;
+  }
+  .relou {
+    height: 49vh;
   }
 }

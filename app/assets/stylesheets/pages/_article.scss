@@ -1,7 +1,9 @@
 .article {
   display: flex;
-  margin: 75px 25px 10px 25px;
-  justify-content: center;
+  flex-direction: column;
+  margin: 75px 0 10px 0;
+  align-items: center;
+  width: 100%;
   a {
     text-decoration: none;
     color: black;
@@ -10,7 +12,7 @@
 
 .article-show {
   display: flex;
-  margin: 10px 25px 10px 25px;
+  margin: 65px 175px 10px 175px;
   flex-direction: column;
   justify-content: center;
   a {
@@ -27,38 +29,52 @@
 }
 
 .article-info {
+  height: 100%;
   width: 100%;
-  border: 1px solid black;
-  img {
-    width: 100%;
-  }
-}
-
-.article-info-bis {
-  width: 100%;
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .article-title {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 50px;
+  align-items: center;
+  height: 60px;
   p:first-child {
-    font-size: 32px;
+    font-size: 28px;
   }
+  p {
+    margin: 0;
+  }
+}
+
+.article-rich {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.article-rich-body {
+  overflow: hidden;
+  height: 30px;
 }
 
 .article-photo {
   display: flex;
   justify-content: center;
-  height: 400px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 .article-photos {
   display: flex;
   justify-content: space-between;
-  height: 400px;
+  width: 100%;
+  img {
+    width: 50%;
+  }
 }
 
 @media (max-width: 1199.98px) {
@@ -70,17 +86,17 @@
       font-size: 15px;
     }
   }
-  .article-photo {
-    height: 400px;
+  .article-show {
+    margin: 55px 125px 10px 125px;
   }
-  .article-photos {
-    height: 225px;
-  }
+  // .article-info {
+  //   width: 670px;
+  // }
 }
 
 @media (max-width: 880px) {
   .article {
-    margin: 60px 25px 10px 25px;
+    margin: 60px 0 10px 0;
   }
   .article-title {
     p:first-child {
@@ -90,19 +106,23 @@
       font-size: 13px
     }
   }
-  .article-photo {
-    height: 350px;
+  .article-show {
+    margin: 45px 75px 10px 75px;
   }
-  .article-photos {
-    height: 225px;
-  }
+  // .article-info {
+  //   width: 500px;
+  // }
 }
 
 @media (max-width: 575.98px) {
   .article {
-    margin: 50px 25px 10px 25px;
+    margin: 50px 0 10px 0;
   }
   .article-title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 85px;
     p:first-child {
       font-size: 16px;
     }
@@ -110,10 +130,16 @@
       font-size: 11px;
     }
   }
-  .article-photo {
-    height: 225px;
+  .article-show {
+    margin: 35px 25px 10px 25px;
   }
-  .article-photos {
-    height: 225px;
+  .article-info {
+    width: 100%;
+  }
+  .article-rich-body {
+    height: 60px;
+    p {
+      font-size: 16px;
+    }
   }
 }
