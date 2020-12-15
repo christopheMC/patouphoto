@@ -1,10 +1,12 @@
 .single-item {
   width: 95%;
-  height: 75vh;
 }
 
 .relou {
-  height: 73vh;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .slick-prev:before,
@@ -58,23 +60,23 @@
   }
   .single-item {
     width: 95%;
-    height: 66vh;
+    height: 69vh;
   }
-  .relou {
-    height: 55vh;
+  .modal-dialog {
+    max-width: 800px !important;
   }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 840px) {
   .sho {
   margin: 41px 50px 10px 50px;
   }
   .single-item {
     width: 95%;
-    height: 58vh;
+    height: 43vh;
   }
-  .relou {
-    height: 57vh;
+  .modal-dialog {
+    max-width: 700px !important;
   }
 }
 
@@ -84,9 +86,12 @@
   }
   .single-item {
     width: 95%;
-    height: 50vh;
+    height: 35vh;
   }
-  .relou {
-    height: 49vh;
+  .modal-dialog {
+    margin: 0px;
+  }
+  .showi {
+    margin: 0 10px;
   }
 }

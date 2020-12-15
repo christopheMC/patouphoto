@@ -25,6 +25,12 @@ const slick = () => {
     $('.single-item').slick('setPosition');
     $('.single-item').css({ opacity: 1 });
   });
+  $('#showModal').on('shown.bs.modal', () => {
+    const id = $('.single-item').data("imageId");
+    $('.single-item').slick('slickGoTo', id, true);
+    $('.single-item').slick('setPosition');
+    $('.single-item').css({ opacity: 1 });
+  });
 }
 
 export { slick };

@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 #home {
-  background-image: asset-url('_AAA6145.jpg');
+  background-image: asset-url('pufin-1.jpg');
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -54,6 +54,7 @@
 
 .formul-new-theme {
   height: 94vh;
+  margin: 0 15px;
 }
 
 .fa-heart {
@@ -121,6 +122,8 @@
   .titre {
     p:last-child {
       font-size: 30px;
+      margin-top: 28px;
+      padding-left: 2px;
     }
     img {
       width: 50px;
