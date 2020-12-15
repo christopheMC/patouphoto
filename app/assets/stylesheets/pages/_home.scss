@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 #home {
-  background-image: asset-url('1.jpg');
+  background-image: asset-url('pufin-1.jpg');
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -11,13 +11,14 @@
 
 .titre {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 25px;
   align-items: center;
   p {
-    font-size: 65px;
-    padding-top: 35px;
+    font-size: 70px;
+    margin-top: 44px;
     padding-left: 5px;
+    margin-bottom: 0;
   }
   p:first-child {
     font-size: 5px;
@@ -53,6 +54,7 @@
 
 .formul-new-theme {
   height: 94vh;
+  margin: 0 15px;
 }
 
 .fa-heart {
@@ -120,6 +122,8 @@
   .titre {
     p:last-child {
       font-size: 30px;
+      margin-top: 28px;
+      padding-left: 2px;
     }
     img {
       width: 50px;

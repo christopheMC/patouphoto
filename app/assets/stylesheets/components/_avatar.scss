@@ -1,3 +1,21 @@
 .avatar {
   width: 40px;
 }
+
+@media (max-width: 1200px) {
+  .avatar {
+  width: 35px;
+}
+}
+
+@media (max-width: 870px) {
+  .avatar {
+  width: 30px;
+}
+}
+
+@media (max-width: 540px) {
+  .avatar {
+  width: 25px;
+}
+}

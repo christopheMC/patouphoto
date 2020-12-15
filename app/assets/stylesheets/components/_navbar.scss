@@ -45,10 +45,17 @@
   }
 }
 
+.dropdown-item {
+    font-size: 25px !important;
+  }
+
 @media (max-width: 1200px) {
   .navbar-patou {
     font-size: 18px;
     height: 47px;
+  }
+  .dropdown-item {
+    font-size: 18px !important;
   }
 }
 
@@ -57,11 +64,17 @@
     font-size: 15px;
     height: 41px;
   }
+  .dropdown-item {
+    font-size: 15px !important;
+  }
 }
 
 @media (max-width: 540px) {
   .navbar-patou {
     font-size: 13px;
     height: 35px;
+  }
+  .dropdown-item {
+    font-size: 13px !important;
   }
 }

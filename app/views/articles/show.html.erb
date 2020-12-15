@@ -10,10 +10,10 @@
 <% end %>
 <div class="article-show">
     <div class="article-title border-bottom">
-      <p class="pl-2 pt-2"><%= @article.title %></p>
-      <p class="pr-2 pt-2">Publié le <%= @article.created_at %></p>
+      <p class="flex-grow-1 p-2"><%= @article.title %></p>
+      <p class="p-2">Publié le <%= @article.created_at.to_s.split(" ").first(2).join(" à ") %></p>
     </div>
-    <div class="p-2" style="height: 200px">
+    <div class="p-2">
       <%= @article.rich_body %>
     </div>
     <% if @article.photos.count <= 1 %>
@@ -25,7 +25,7 @@
     <% else %>
       <div class="article-photos">
         <% @article.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 300, crop: :fill %>
+          <%= cl_image_tag photo.key, crop: :fill %>
         <% end %>
       </div>
     <% end %>

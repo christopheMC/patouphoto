@@ -1,10 +1,12 @@
 .single-item {
   width: 95%;
-  height: 75vh;
 }
 
 .relou {
-  height: 73vh;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .slick-prev:before,
@@ -56,16 +58,40 @@
   .sho {
   margin: 47px 85px 10px 85px;
   }
+  .single-item {
+    width: 95%;
+    height: 69vh;
+  }
+  .modal-dialog {
+    max-width: 800px !important;
+  }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 840px) {
   .sho {
   margin: 41px 50px 10px 50px;
+  }
+  .single-item {
+    width: 95%;
+    height: 43vh;
+  }
+  .modal-dialog {
+    max-width: 700px !important;
   }
 }
 
 @media (max-width: 540px) {
   .sho {
   margin: 35px 25px 10px 25px;
+  }
+  .single-item {
+    width: 95%;
+    height: 35vh;
+  }
+  .modal-dialog {
+    margin: 0px;
+  }
+  .showi {
+    margin: 0 10px;
   }
 }
