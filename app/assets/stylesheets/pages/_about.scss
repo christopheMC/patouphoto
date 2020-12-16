@@ -1,5 +1,5 @@
 .about {
-  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(https://cdn.futura-sciences.com/buildsv6/images/wide1280/b/7/f/b7f7a48b29_102814_05-1012.jpg);
+  background-image: asset-url('PROPOS1.jpg');
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -20,6 +20,7 @@
 
 @media (max-width: 540px) {
   .instaface {
-    margin-top: 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
   }
 }
