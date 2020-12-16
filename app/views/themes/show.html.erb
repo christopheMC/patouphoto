@@ -2,8 +2,8 @@
   <div class="sho d-flex justify-content-center border-bottom dropdown">
     <h4 class="mt-2 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= @theme.name %></h3>
     <div class="dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <%= link_to "MODIFIER NOM DU THEME", edit_theme_path(@theme), class: "dropdown-item" %>
-      <%= link_to "AJOUTER PHOTO", new_theme_image_path(@theme), class: "dropdown-item" %>
+      <%= link_to "Modifier nom du thème", edit_theme_path(@theme), class: "dropdown-item" %>
+      <%= link_to "Ajouter photo", new_theme_image_path(@theme), class: "dropdown-item" %>
       <%= link_to "Effacer #{@theme.name}",
                   theme_path(@theme),
                   method: :delete,

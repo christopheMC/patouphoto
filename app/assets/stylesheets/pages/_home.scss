@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 #home {
-  background-image: asset-url('pufin-1.jpg');
+  background-image: asset-url('ACCUEIL4.jpg');
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -14,11 +14,14 @@
   top: 45%;
   left: 25px;
   align-items: center;
+  background-color: white;
+  border-radius: 15px;
   p {
     font-size: 70px;
     margin-top: 44px;
     padding-left: 5px;
     margin-bottom: 0;
+    padding-right: 10px
   }
   p:first-child {
     font-size: 5px;
@@ -120,6 +123,8 @@
     }
   }
   .titre {
+    top: 75%;
+    left: 10px;
     p:last-child {
       font-size: 30px;
       margin-top: 28px;
@@ -135,7 +140,8 @@
   .compteur {
     p {
       font-size: 10px;
-      color: black;
+      color: white;
+      font-weight: bolder;
     }
     a {
       font-size: 10px;
