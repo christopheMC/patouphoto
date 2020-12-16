@@ -90,6 +90,11 @@
     grid-template-columns: 1fr 1fr;
     margin: 10px 85px;
   }
+  .card {
+    img {
+      height: 325px;
+    }
+  }
 }
 
 @media (max-width: 870px) {
@@ -116,6 +121,11 @@
   .cards {
     grid-template-columns: 1fr 1fr;
     margin: 10px 50px;
+  }
+  .card {
+    img {
+      height: 240px;
+    }
   }
 }
 
@@ -146,7 +156,7 @@
   }
   .card {
     img {
-      height: 178.667px;
+      height: 180px;
     }
   }
 }
