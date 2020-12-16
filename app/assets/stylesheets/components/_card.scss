@@ -11,7 +11,6 @@
 
 .card-product img {
   height: 100%;
-  width: 300px;
   object-fit: cover;
   border-radius: 10px 0 0 10px;
 }
@@ -69,9 +68,6 @@
   .card-product {
     height: 225px;
     width: 670px;
-    img {
-      width: 168px;
-    }
     h2 {
       font-size: 26px;
     }
@@ -100,10 +96,7 @@
 @media (max-width: 870px) {
   .card-product {
     height: 225px;
-    width: 500px;
-    img {
-      width: 150px;
-    }
+    width: 600px;
     h2 {
       font-size: 23px;
     }
@@ -133,9 +126,6 @@
   .card-product {
     height: 230px;
     width: 300px;
-    img {
-      width: 125px;
-    }
     h2 {
       font-size: 19px;
       padding-top: 10px;
