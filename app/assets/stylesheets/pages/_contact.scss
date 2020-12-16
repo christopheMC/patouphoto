@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin: 40px 5px 10px 5px;
 }
 
 .contact {
@@ -201,6 +200,11 @@ input[type="checkbox"] {
   }
   .contact {
     margin: 45px 10px 10px 10px;
+  }
+  .contact-new {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 

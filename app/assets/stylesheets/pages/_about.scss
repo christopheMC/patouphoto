@@ -11,8 +11,15 @@
 .instaface {
   text-align: center;
   font-size: 24px;
+  margin-top: 20px;
   i {
     text-decoration: none;
     color: black;
+  }
+}
+
+@media (max-width: 540px) {
+  .instaface {
+    margin-top: 5px;
   }
 }
