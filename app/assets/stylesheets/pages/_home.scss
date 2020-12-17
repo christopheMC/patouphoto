@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 #home {
-  background-image: asset-url('ACCUEIL4.jpg');
+  background-image: asset-url('ACCUEIL1.jpg');
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -14,8 +14,6 @@
   top: 45%;
   left: 25px;
   align-items: center;
-  background-color: white;
-  border-radius: 15px;
   p {
     font-size: 70px;
     margin-top: 44px;
@@ -123,8 +121,8 @@
     }
   }
   .titre {
-    top: 75%;
-    left: 10px;
+    top: 50%;
+    left: 5px;
     p:last-child {
       font-size: 30px;
       margin-top: 28px;
