@@ -31,6 +31,9 @@
   justify-content: center;
   align-items: center;
   margin: 0 400px;
+  form {
+    width: 100%;
+  }
 }
 
 .article-info {
@@ -134,6 +137,7 @@
   }
   .article-bis {
     margin: 0 10px;
+
   }
   .article-title {
     display: flex;
