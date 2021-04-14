@@ -16,16 +16,21 @@
 .formulaire {
   border: 2px solid black;
   border-radius: 5px;
+  width: 45%;
   height: 625px;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 25px 25px 0 25px;
+  form {
+    width: 90%;
+  }
 }
 
 .question {
   border: 2px solid black;
+  width: 45%;
   border-radius: 5px;
   height: 625px;
   padding: 20px;
@@ -192,10 +197,12 @@ input[type="checkbox"] {
   }
   .question {
     height: 235px;
+    width: 80%;
     font-size: 13px;
   }
   .formulaire {
-    height: 250px;
+    height: 235px;
+    width: 80%;
     font-size: 13px;
   }
   .contact {
